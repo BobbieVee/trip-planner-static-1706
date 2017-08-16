@@ -1,22 +1,12 @@
 // This file should contain all the record creation needed to seed the database with its default values.
 // The data can then be loaded with the node seed.js
 
-
-
 var Promise = require('bluebird');
 var db = require('./models');
-
-var Place = db.models.Place;
-var Hotel = db.models.Hotel;
-var Restaurant = db.models.Restaurant;
-var Activity = db.models.Activity;
-
-// var Place = require('./models/place');
-// var Hotel = require('./models/hotel');
-// var Restaurant = require('./models/restaurant');
-// var Activity = require('./models/activity');
-
-
+var Place = require('./models/place');
+var Hotel = require('./models/hotel');
+var Restaurant = require('./models/restaurant');
+var Activity = require('./models/activity');
 
 var data = {
   hotels: [
@@ -91,8 +81,8 @@ db.sync({force: true})
 })
 .catch(function (err) {
   console.error('There was totally a problem', err, err.stack);
+})
+.finally(function () {
+  db.close(); // creates but does not return a promise
+  return null; // stops bluebird from complaining about un-returned promise
 });
-// .finally(function () {
-//   db.models.close(); // creates but does not return a promise
-//   return null; // stops bluebird from complaining about un-returned promise
-// });

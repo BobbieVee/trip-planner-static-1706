@@ -29,14 +29,9 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-console.log('db = ', db);
-
-app.use((err, req, res, next) => {
-	res.render('error');
-});
 
 db.sync()
-.then(() => db.seed())
+// .then(() => db.seed())
 .catch(err => console.error(err))
 ;
  
