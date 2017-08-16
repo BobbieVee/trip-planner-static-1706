@@ -5,6 +5,7 @@ const swig = require('swig');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
+const db = require('./models/index');
 
 app.use(morgan('combined'));
 app.use(bodyParser.json());
@@ -22,8 +23,22 @@ app.get('/', (req, res, next) => {
 	res.render('index', {});
 });
 
-app.use((err, req, res, next) => {
-	res.render('/error.html');
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
+
+console.log('db = ', db);
+
+app.use((err, req, res, next) => {
+	res.render('error');
+});
+
+db.sync()
+.then(() => db.seed())
+.catch(err => console.error(err))
+;
+ 
 
 app.listen(port, () => console.log(`Listening intently on port ${port}`))
