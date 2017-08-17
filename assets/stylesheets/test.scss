@@ -1,0 +1,28 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.picker {
+	background-color: #eaad70;
+	padding: 10px;
+}
+
+.navbar {
+	background-color: #e85a19;
+}
+
+.side-header {
+	Padding: 10px;
+}
+
+.my-picks {
+	background-color: #1ce50d;
+}
+
+.my-picks-select {
+	background-color: #e5da12;
+}

@@ -1,0 +1,19 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; }
+
+.picker {
+  background-color: #eaad70;
+  padding: 10px; }
+
+.navbar {
+  background-color: #e85a19; }
+
+.side-header {
+  Padding: 10px; }
+
+.my-picks {
+  background-color: #1ce50d; }
+
+.my-picks-select {
+  background-color: #e5da12; }
