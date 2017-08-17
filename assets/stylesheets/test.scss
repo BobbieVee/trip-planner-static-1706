@@ -3,7 +3,6 @@ $primary-color: #333;
 
 body {
   font: 100% $font-stack;
-  color: $primary-color;
 }
 
 .picker {
@@ -13,10 +12,15 @@ body {
 
 .navbar {
 	background-color: #e85a19;
+	color: red;
+}
+
+.panel-head {
+	background-color: #fcc605;
 }
 
 .side-header {
-	Padding: 10px;
+	Padding: 5px;
 }
 
 .my-picks {

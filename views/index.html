@@ -5,6 +5,7 @@
 {% block content %}
 	<div class="row">
 	 	<div class='col-sm-9'>
+	 	<h3>Map</h3>
 		</div>
 	 	<div class='col-sm-3'>
 
@@ -15,38 +16,52 @@
 						<option>{{ hotel.name}}</option>
 					{% endfor %}	
 				</select>
+				<button class='btn btn-danger btn-xs'> x </button>				
 				<h4> Restaurants: </h4>	
 				<select>
 					{% for restaurant in restaurants %}
 						<option>{{ restaurant.name}}</option>
 					{% endfor %}	
 				</select>
+				<button class='btn btn-danger btn-xs'> x </button>				
 				<h4>Activities: </h4>
 				<select>
 					{% for activity in activities %}
 						<option>{{ activity.name}}</option>
 					{% endfor %}	
 				</select>
+				<button class='btn btn-danger btn-xs'> x </button>				
 	 		</div>
 		 	<div class='side-header'> 
-				<h2>Day 2</h2>
+				<h4>Day 2</h4	>
 			</div>
 			<div class="panel panel-default">
-			  <div class="panel-heading ">
-			    <h3 class="panel-title my-picks-select">Panel title</h3>
+			  <div class="panel-heading" style="background-color: #fcc605" >
+			  <div class="btn-group" data-toggle="buttons">
+					  <label class="btn btn-primary active">
+					    <input type="radio" name="options" id="option1" autocomplete="off" checked> 1 
+					  </label>
+					  <label class="btn btn-primary">
+					    <input type="radio" name="options" id="option2" autocomplete="off"> 2
+					  </label>
+					  <label class="btn btn-primary">
+					    <input type="radio" name="options" id="option3" autocomplete="off"> 3
+					  </label>
+					</div>
 			  </div>
 			  <div class="panel-body my-picks">
-			    <h4>My Hotel</h4>
+			     	<h4>My Hotel</h4>
+			    
 			    <ul>
-			    	<li>xxxxxxxxxx</li>
+			    	<li>[xxxxxxxxxx]  <button class='btn btn-danger btn-xs'> x </button></li>
 			    </ul>
 			    <h4>My Restaurants</h4>
 			    <ul>
-			    	<li>xxxxxxxxxx</li>
+			    	<li>[xxxxxxxxxx]  <button class='btn btn-danger btn-xs'> x </button></li>
 			    </ul>			    
 			    <h4>My Activites</h4>
 			    <ul>
-			    	<li>xxxxxxxxxx</li>
+			    	<li>[xxxxxxxxxx]  <button class='btn btn-danger btn-xs'> x </button></li>
 			    </ul>
 			  </div>
 			</div>

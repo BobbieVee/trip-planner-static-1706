@@ -1,16 +1,19 @@
 body {
-  font: 100% Helvetica, sans-serif;
-  color: #333; }
+  font: 100% Helvetica, sans-serif; }
 
 .picker {
   background-color: #eaad70;
   padding: 10px; }
 
 .navbar {
-  background-color: #e85a19; }
+  background-color: #e85a19;
+  color: red; }
+
+.panel-head {
+  background-color: #fcc605; }
 
 .side-header {
-  Padding: 10px; }
+  Padding: 5px; }
 
 .my-picks {
   background-color: #1ce50d; }
