@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const db = new Sequelize('postgres://localhost/tripplanner_db');
+const db = new Sequelize('postgres://localhost/tripplanner_db', {logging: false});
 
 
 const Place = db.define('place', {
@@ -31,7 +31,7 @@ Hotel.belongsTo(Place);
 Restaurant.belongsTo(Place);
 Activity.belongsTo(Place);
 
-const sync = () => db.sync({ force: true });
+const sync = () => db.sync();
 
 const seed = () => {
   Place.create({
